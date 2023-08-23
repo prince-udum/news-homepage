@@ -42,5 +42,5 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/prince-udum)
-- Twitter - [@yourusername](https://www.twitter.com/PrinceUdum)
+- Frontend Mentor - [Prince-Udum](https://www.frontendmentor.io/profile/prince-udum)
+- Twitter - [Prince-Udum](https://www.twitter.com/PrinceUdum)
