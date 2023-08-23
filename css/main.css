@@ -1,0 +1,418 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* primary colors */
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+
+  /* neutrals */
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+
+  --fluid-width: 90vw;
+  --max-width: 1120px;
+  --headingFont: "Inter", sans-serif;
+  --bodyFont: "Inter", sans-serif;
+  --transition: all 0.3s ease;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  background: var(--off-white);
+  font-family: var(--bodyFont);
+  font-weight: 500;
+  line-height: 1.75;
+  color: #000000;
+}
+
+p {
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  margin-bottom: 1.38rem;
+  font-family: var(--headingFont);
+  font-weight: 900;
+  line-height: 1;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small,
+.text_small {
+  font-size: 0.8rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img:not(.mobile-menu) {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* project css */
+
+nav {
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-center {
+  width: var(--fluid-width);
+  max-width: var(--max-width);
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container .logo {
+  width: 3.5rem;
+}
+
+.mobile-menu {
+  cursor: pointer;
+}
+
+.navlinks {
+  position: fixed;
+  height: 100vh;
+  width: 70vw;
+  background-color: var(--off-white);
+  top: 0;
+  right: 0;
+  padding: 1.5rem;
+  transform: translateX(100%);
+  transition: var(--transition);
+}
+
+.show-navlinks {
+  transform: translateX(0);
+}
+
+.navlinks ul {
+  clear: both;
+  padding: 5rem 0;
+}
+
+ul a {
+  display: inline-block;
+  padding: 0.5rem 0;
+  font-size: 1.3rem;
+  color: var(--very-dark-blue);
+  transition: var(--transition);
+}
+
+ul a:hover {
+  color: var(--soft-red);
+}
+
+.navlinks .close-menu {
+  width: 32px;
+  float: right;
+  display: block;
+  cursor: pointer;
+}
+
+/* hero */
+
+.container {
+  width: var(--fluid-width);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.img-container .desktop-img {
+  display: none;
+}
+
+.hero-text {
+  padding: 2rem 0 3rem 0;
+}
+
+.heading {
+  font-size: 2.8rem;
+}
+
+.sub-heading p {
+  color: var(--dark-grayish-blue);
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: block;
+  padding: 1rem 2rem;
+  background: var(--soft-red);
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: var(--off-white);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.btn:hover {
+  background: var(--very-dark-blue);
+}
+
+aside {
+  background: var(--very-dark-blue);
+  color: white;
+  padding: 1.5rem;
+}
+
+aside article {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--off-white);
+}
+
+aside article:last-child {
+  border: none;
+}
+
+h2 {
+  color: var(--soft-orange);
+}
+
+h3 {
+  font-size: 1.3rem;
+  color: var(--off-white);
+  margin-bottom: 1rem;
+  transition: var(--transition);
+}
+
+h3:hover {
+  color: var(--soft-orange);
+}
+
+aside p {
+  color: var(--grayish-blue);
+}
+
+.more-news {
+  padding: 3rem 0;
+}
+
+.more-news article {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  padding: 1rem 0;
+  align-items: center;
+}
+
+span {
+  font-size: 2.2rem;
+
+  display: inline-block;
+  color: var(--grayish-blue);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+h4:hover {
+  color: var(--soft-red);
+}
+
+.more-news p {
+  color: var(--dark-grayish-blue);
+}
+
+@media screen and (min-width: 500px) {
+  .btn {
+    font-size: 1rem;
+  }
+  .heading {
+    font-size: 3.5rem;
+  }
+  p {
+    font-size: 1.3rem;
+  }
+  h2 {
+    font-size: 2.7rem;
+  }
+  h3 {
+    font-size: 1.7rem;
+  }
+  span {
+    font-size: 3rem;
+  }
+  h4 {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu,
+  .close-menu {
+    display: none;
+  }
+
+  .show-navlinks {
+    transform: translateX(0);
+  }
+
+  .navlinks {
+    transform: unset;
+    background: none;
+    position: unset;
+    height: 100%;
+    width: unset;
+  }
+
+  .navlinks ul {
+    padding: 0;
+    display: flex;
+    clear: none;
+    gap: 2rem;
+  }
+  .navlinks .close-menu {
+    display: none;
+    float: none;
+  }
+
+  .nav-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  ul a {
+    display: inline-block;
+    padding: 0;
+    font-size: 1rem;
+    color: var(--very-dark-blue);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .img-container .mobile-img {
+    display: none;
+  }
+
+  .img-container .desktop-img {
+    display: block;
+  }
+
+  .hero-section .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+
+  .hero-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    padding-bottom: 0;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+  .heading {
+    font-size: 3.3rem;
+    max-width: 300px;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  .more-news .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  h4 {
+    font-size: 1.1rem;
+  }
+  span {
+    font-size: 1.5rem;
+  }
+  .more-news img {
+    width: 135px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .more-news img {
+    width: 90px;
+  }
+  .more-news article {
+    gap: 0;
+  }
+  .more-news .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .more-news p {
+    max-width: 225px;
+  }
+}
